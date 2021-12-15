@@ -7,6 +7,7 @@ using UnityEngine.XR.Interaction.Toolkit;
 public class ThrowableScript : MonoBehaviour
 {
     public Rigidbody rb;
+  
     // Start is called before the first frame update
     void Start()
     {
@@ -25,12 +26,10 @@ public class ThrowableScript : MonoBehaviour
         {
             Debug.Log("target touch");
             rb.isKinematic = true;
-        }
-
-        if (collision.gameObject.tag == "Player")
-        {
-            Debug.Log("player touch");
-            rb.isKinematic = false;
+            
+            Destroy(rb, 10);
+            Rigidbody clone;
+            clone = Instantiate(rb, new Vector3(2.79f, 2f, 5.8f), new Quaternion());
         }
     }
 }

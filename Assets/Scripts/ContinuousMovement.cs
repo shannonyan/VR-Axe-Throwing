@@ -9,7 +9,7 @@ public class ContinuousMovement : MonoBehaviour
     public XRNode inputSource;
     private Vector2 inputAxis;
     private CharacterController character;
-    public float speed = 4;
+    public float speed = 15;
     private XRRig rig;
 
     // Start is called before the first frame update

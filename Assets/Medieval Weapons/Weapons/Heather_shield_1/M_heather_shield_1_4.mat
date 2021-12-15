@@ -4,8 +4,9 @@
 Material:
   serializedVersion: 6
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
   m_Name: M_heather_shield_1_4
   m_Shader: {fileID: 4800000, guid: a3ec6cc947300904dbf315cda43fc8a2, type: 3}
   m_ShaderKeywords: _METALLICGLOSSMAP _NORMALMAP
@@ -151,3 +152,4 @@ Material:
     - _Layer4Color3: {r: 0.7647059, g: 0.3100686, b: 0.17647058, a: 0}
     - _Layer4Color4: {r: 0, g: 0.7824035, b: 0.81617653, a: 0}
     - _Layer4Offset: {r: 0.5, g: 0.44, b: 0, a: 0}
+  m_BuildTextureStacks: []

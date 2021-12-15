@@ -117,8 +117,8 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  m_ThrowVelocityScale: 4
-  m_ThrowAngularVelocityScale: 1.5
+  m_ThrowVelocityScale: 3.5
+  m_ThrowAngularVelocityScale: 2
   m_ForceGravityOnDetach: 0
   m_RetainTransformParent: 1
   m_AttachPointCompatibilityMode: 0
@@ -144,7 +144,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1613909706080392, guid: f10d431918095954a834716d1ca208ac, type: 3}
       propertyPath: m_Name
-      value: New Prefab
+      value: Axe_Throw
       objectReference: {fileID: 0}
     - target: {fileID: 4222854671792136, guid: f10d431918095954a834716d1ca208ac, type: 3}
       propertyPath: m_RootOrder

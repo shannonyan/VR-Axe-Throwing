@@ -26,10 +26,18 @@ public class ThrowableScript : MonoBehaviour
         {
             Debug.Log("target touch");
             rb.isKinematic = true;
-            
-            Destroy(rb, 10);
-            Rigidbody clone;
-            clone = Instantiate(rb, new Vector3(2.79f, 2f, 5.8f), new Quaternion());
+
+            StartCoroutine(SelfDestruct());
         }
+    }
+
+    IEnumerator SelfDestruct()
+    {
+        yield return new WaitForSeconds(5);
+        Destroy(gameObject);
+        Rigidbody clone;
+        clone = Instantiate(rb, new Vector3(1.94f, 2f, 5.8f), transform.rotation);
+        //Instantiate(rb, new Vector3(-7.5f, 2f, 5.8f), transform.rotation);
+        clone.isKinematic = false;
     }
 }

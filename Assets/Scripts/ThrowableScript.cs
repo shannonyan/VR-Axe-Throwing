@@ -26,18 +26,23 @@ public class ThrowableScript : MonoBehaviour
         {
             Debug.Log("target touch");
             rb.isKinematic = true;
+            StartCoroutine(SelfDestruct());
+        }
 
+        if (collision.gameObject.tag == "Ground")
+        {
             StartCoroutine(SelfDestruct());
         }
     }
 
     IEnumerator SelfDestruct()
     {
-        yield return new WaitForSeconds(5);
-        Destroy(gameObject);
-        Rigidbody clone;
-        clone = Instantiate(rb, new Vector3(1.94f, 2f, 5.8f), transform.rotation);
+        yield return new WaitForSeconds(7.5f);
+        //Destroy(gameObject);
+        //Rigidbody clone;
+        //clone = Instantiate(rb, new Vector3(1.94f, 2f, 5.8f), transform.rotation);
         //Instantiate(rb, new Vector3(-7.5f, 2f, 5.8f), transform.rotation);
-        clone.isKinematic = false;
+        rb.isKinematic = false;
+        transform.position = new Vector3(1.94f, 3f, 5.8f);
     }
 }

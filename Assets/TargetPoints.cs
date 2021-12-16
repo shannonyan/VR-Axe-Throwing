@@ -1,15 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class TargetPoints : MonoBehaviour
 {
+    public static int gameScore = 0;
+    public static TextMeshProUGUI scoreText;
     public int pointValue = 2;
-    private GameManager gameManager;
     // Start is called before the first frame update
     void Start()
     {
-        gameManager = GameObject.Find("Game Manager").GetComponent<GameManager>();
+        gameScore = 0;
+        scoreText.text = "Score: 0";
     }
 
     // Update is called once per frame
@@ -18,8 +21,10 @@ public class TargetPoints : MonoBehaviour
 
     }
 
-    void OnCollisionEnter(Collision collision)
+    void OnTriggerEnter(Collider other)
     {
-        gameManager.UpdateScore(pointValue);
+        gameScore += pointValue;
+        scoreText.text = "Score: " + gameScore;
+
     }
 }
